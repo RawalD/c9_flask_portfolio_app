@@ -15,7 +15,8 @@ def home_page():
 
 @app.route('/<name>')
 def profile(name):
-	return render_template('index.html', name=name)
+	lego_name = "Lego " + name
+	return render_template('index.html', name=lego_name)
 
 
 @app.route('/add_numbers', methods=['GET','POST'])
